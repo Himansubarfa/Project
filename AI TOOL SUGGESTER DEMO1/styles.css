@@ -1,0 +1,366 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9ff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #3d5af1;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header Styles */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #3d5af1;
+}
+
+.logo-icon {
+    background-color: #3d5af1;
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3d5af1;
+}
+
+/* Hero Section */
+.hero {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #f6f8ff 0%, #e9ecff 100%);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.search-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-box {
+    display: flex;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-box button {
+    background-color: #3d5af1;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-box button:hover {
+    background-color: #2a46d1;
+}
+
+/* Results Section */
+.results-section {
+    padding: 40px 0;
+}
+
+#results-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.result-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.result-card h3 {
+    color: #3d5af1;
+    margin-bottom: 10px;
+}
+
+.result-card p {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.result-card a {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #f0f3ff;
+    color: #3d5af1;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.result-card a:hover {
+    background-color: #e0e6ff;
+}
+
+.loading {
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    color: #666;
+    font-style: italic;
+}
+
+.no-results {
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    color: #666;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+/* Popular Section */
+.popular-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+.popular-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+    font-size: 2rem;
+}
+
+.popular-tasks {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.task-item {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.task-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.task-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.task-item h3 {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.task-tools {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    text-align: left;
+}
+
+.task-item:hover .task-tools {
+    max-height: 300px;
+}
+
+.tool-list {
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.tool-list li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.tool-list li:before {
+    content: "⭐";
+    margin-right: 8px;
+    color: #ffc107;
+}
+
+.tool-list a {
+    color: #3d5af1;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.tool-list a:hover {
+    text-decoration: underline;
+}
+
+/* About Section */
+.about-section {
+    padding: 70px 0;
+    background-color: #f0f3ff;
+}
+
+.about-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    text-align: center;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 25px 0;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .result-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .result-card {
+        width: 100%;
+    }
+    
+    .popular-tasks {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .search-box {
+        flex-direction: column;
+    }
+    
+    .search-box input, 
+    .search-box button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .popular-tasks {
+        grid-template-columns: 1fr;
+    }
+    
+    header .container {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        margin-top: 15px;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+    }
+}

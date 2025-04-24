@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tool Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">AI</div>
+                <span>AI Tool Finder</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#search">Find Tools</a></li>
+                    <li><a href="#popular">Popular Tools</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Find the Perfect AI Tool for Your Task</h1>
+            <p>Describe what you want to do, and we'll suggest the best AI tools for the job</p>
+            
+            <div class="search-container" id="search">
+                <div class="search-box">
+                    <input type="text" id="task-input" placeholder="E.g., remove background from image, summarize an article...">
+                    <button id="search-btn">Find Tools</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="results-section">
+        <div class="container">
+            <div id="results-container"></div>
+        </div>
+    </section>
+
+    <section class="popular-section" id="popular">
+        <div class="container">
+            <h2>Popular AI Tasks</h2>
+            <div class="popular-tasks">
+                <div class="task-item" data-task="remove background from image">
+                    <div class="task-icon">🖼️</div>
+                    <h3>Remove Image Background</h3>
+                    <div class="task-tools">
+                        <ul class="tool-list">
+                            <li><a href="#">Remove.bg</a></li>
+                            <li><a href="#">Adobe Express</a></li>
+                            <li><a href="#">Canva Background Remover</a></li>
+                            <li><a href="#">Pixlr BG</a></li>
+                            <li><a href="#">Fotor</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="task-item" data-task="generate images with AI">
+                    <div class="task-icon">🎨</div>
+                    <h3>Create AI Images</h3>
+                    <div class="task-tools">
+                        <ul class="tool-list">
+                            <li><a href="#">DALL-E 3</a></li>
+                            <li><a href="#">Midjourney</a></li>
+                            <li><a href="#">Stable Diffusion</a></li>
+                            <li><a href="#">Leonardo.AI</a></li>
+                            <li><a href="#">Canva AI Image Generator</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="task-item" data-task="transcribe audio to text">
+                    <div class="task-icon">🎤</div>
+                    <h3>Transcribe Audio</h3>
+                    <div class="task-tools">
+                        <ul class="tool-list">
+                            <li><a href="#">Whisper AI</a></li>
+                            <li><a href="#">Otter.ai</a></li>
+                            <li><a href="#">Rev</a></li>
+                            <li><a href="#">Sonix</a></li>
+                            <li><a href="#">Descript</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="task-item" data-task="create logos with AI">
+                    <div class="task-icon">📝</div>
+                    <h3>Design Logos</h3>
+                    <div class="task-tools">
+                        <ul class="tool-list">
+                            <li><a href="#">Looka</a></li>
+                            <li><a href="#">Brandmark</a></li>
+                            <li><a href="#">Tailor Brands</a></li>
+                            <li><a href="#">Wix Logo Maker</a></li>
+                            <li><a href="#">Adobe Express Logo Maker</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="task-item" data-task="summarize long text">
+                    <div class="task-icon">📃</div>
+                    <h3>Summarize Text</h3>
+                    <div class="task-tools">
+                        <ul class="tool-list">
+                            <li><a href="#">ChatGPT</a></li>
+                            <li><a href="#">Claude</a></li>
+                            <li><a href="#">TLDR This</a></li>
+                            <li><a href="#">Quillbot Summarizer</a></li>
+                            <li><a href="#">Wordtune</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="task-item" data-task="generate code with AI">
+                    <div class="task-icon">💻</div>
+                    <h3>Generate Code</h3>
+                    <div class="task-tools">
+                        <ul class="tool-list">
+                            <li><a href="#">GitHub Copilot</a></li>
+                            <li><a href="#">Claude Code</a></li>
+                            <li><a href="#">ChatGPT</a></li>
+                            <li><a href="#">Replit Ghostwriter</a></li>
+                            <li><a href="#">Amazon CodeWhisperer</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="task-item" data-task="translate text between languages">
+                    <div class="task-icon">🌐</div>
+                    <h3>Translate Text</h3>
+                    <div class="task-tools">
+                        <ul class="tool-list">
+                            <li><a href="#">DeepL</a></li>
+                            <li><a href="#">Google Translate</a></li>
+                            <li><a href="#">ChatGPT</a></li>
+                            <li><a href="#">Microsoft Translator</a></li>
+                            <li><a href="#">Reverso</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="task-item" data-task="create AI videos">
+                    <div class="task-icon">🎬</div>
+                    <h3>Generate Videos</h3>
+                    <div class="task-tools">
+                        <ul class="tool-list">
+                            <li><a href="#">Runway</a></li>
+                            <li><a href="#">Synthesia</a></li>
+                            <li><a href="#">HeyGen</a></li>
+                            <li><a href="#">Descript</a></li>
+                            <li><a href="#">D-ID</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="task-item" data-task="write email with AI">
+                    <div class="task-icon">✉️</div>
+                    <h3>Draft Emails</h3>
+                    <div class="task-tools">
+                        <ul class="tool-list">
+                            <li><a href="#">Gmail Smart Compose</a></li>
+                            <li><a href="#">Lavender</a></li>
+                            <li><a href="#">Grammarly</a></li>
+                            <li><a href="#">Flowrite</a></li>
+                            <li><a href="#">OthersideAI</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="task-item" data-task="analyze data with AI">
+                    <div class="task-icon">📊</div>
+                    <h3>Analyze Data</h3>
+                    <div class="task-tools">
+                        <ul class="tool-list">
+                            <li><a href="#">IBM Watson Analytics</a></li>
+                            <li><a href="#">Tableau</a></li>
+                            <li><a href="#">DataRobot</a></li>
+                            <li><a href="#">Microsoft Power BI</a></li>
+                            <li><a href="#">Google Data Studio</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="task-item" data-task="create AI music">
+                    <div class="task-icon">🎵</div>
+                    <h3>Generate Music</h3>
+                    <div class="task-tools">
+                        <ul class="tool-list">
+                            <li><a href="#">Suno</a></li>
+                            <li><a href="#">AIVA</a></li>
+                            <li><a href="#">Soundraw</a></li>
+                            <li><a href="#">Ecrett Music</a></li>
+                            <li><a href="#">Amper Music</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="task-item" data-task="edit photos with AI">
+                    <div class="task-icon">📸</div>
+                    <h3>Edit Photos</h3>
+                    <div class="task-tools">
+                        <ul class="tool-list">
+                            <li><a href="#">Adobe Photoshop (with Generative Fill)</a></li>
+                            <li><a href="#">Luminar AI</a></li>
+                            <li><a href="#">Pixlr</a></li>
+                            <li><a href="#">Fotor</a></li>
+                            <li><a href="#">Remini</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="task-item" data-task="convert voice to text">
+                    <div class="task-icon">🗣️</div>
+                    <h3>Voice to Text</h3>
+                    <div class="task-tools">
+                        <ul class="tool-list">
+                            <li><a href="#">Google Speech-to-Text</a></li>
+                            <li><a href="#">Dragon by Nuance</a></li>
+                            <li><a href="#">Amazon Transcribe</a></li>
+                            <li><a href="#">Otter.ai</a></li>
+                            <li><a href="#">Microsoft Azure Speech</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="task-item" data-task="create chatbots">
+                    <div class="task-icon">🤖</div>
+                    <h3>Build Chatbots</h3>
+                    <div class="task-tools">
+                        <ul class="tool-list">
+                            <li><a href="#">Botpress</a></li>
+                            <li><a href="#">Dialogflow</a></li>
+                            <li><a href="#">ManyChat</a></li>
+                            <li><a href="#">ChatGPT API</a></li>
+                            <li><a href="#">Anthropic API</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="task-item" data-task="generate presentation slides">
+                    <div class="task-icon">📊</div>
+                    <h3>Create Presentations</h3>
+                    <div class="task-tools">
+                        <ul class="tool-list">
+                            <li><a href="#">Beautiful.ai</a></li>
+                            <li><a href="#">Tome</a></li>
+                            <li><a href="#">Gamma</a></li>
+                            <li><a href="#">Slidebean</a></li>
+                            <li><a href="#">Pitch</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="task-item" data-task="convert text to speech">
+                    <div class="task-icon">🔊</div>
+                    <h3>Text to Speech</h3>
+                    <div class="task-tools">
+                        <ul class="tool-list">
+                            <li><a href="#">ElevenLabs</a></li>
+                            <li><a href="#">Amazon Polly</a></li>
+                            <li><a href="#">Google Text-to-Speech</a></li>
+                            <li><a href="#">Microsoft Azure TTS</a></li>
+                            <li><a href="#">Play.ht</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2>About AI Tool Finder</h2>
+            <p>AI Tool Finder helps you discover the most relevant AI tools for your specific tasks. We maintain a curated database of the best AI solutions across various categories including image editing, content creation, data analysis, and more.</p>
+            <p>Our goal is to save you time by connecting you with the right AI tool for the job, whether you're a professional, student, or hobbyist.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AI Tool Finder. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
