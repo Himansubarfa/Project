@@ -1,0 +1,424 @@
+/* === Background Image === */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover; /* Replace with your image */
+  z-index: -1;
+  transition: filter 0.3s ease;
+}
+
+/* === Blur effect === */
+body.blur-background::before {
+  filter: blur(5px);
+}
+
+/* Optional tweaks to container for visibility */
+.container {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 3rem auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Textarea styling */
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+}
+
+
+
+
+
+
+/* Base styles */
+:root {
+    --primary-color: #2563eb;
+    --primary-light: #dbeafe;
+    --primary-dark: #1e40af;
+    --neutral-50: #f9fafb;
+    --neutral-100: #f3f4f6;
+    --neutral-200: #e5e7eb;
+    --neutral-300: #d1d5db;
+    --neutral-600: #4b5563;
+    --neutral-700: #374151;
+    --neutral-800: #1f2937;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --radius-md: 6px;
+    --radius-lg: 12px;
+    --radius-full: 9999px;
+    --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --transition-all: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: var(--neutral-800);
+    background-color: var(--neutral-100);
+    margin: 0;
+    padding: 1rem;
+    
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* Typography */
+  h1 {
+    color: var(--neutral-800);
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+  
+  h2 {
+    color:white;            /*var(--primary-color);*/
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    /* border-bottom: 1px solid var(--neutral-200); */
+      border-bottom: 1px solid whitesmoke;    
+  
+  }
+  
+  /* Form elements */
+  textarea {
+    width: 100%;
+    height: 12rem;
+    padding: 0.875rem;
+    border: 1px solid var(--neutral-300);
+    border-radius: var(--radius-md);
+    background-color: white;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
+    transition: border-color 0.15s ease;
+    margin-bottom: 1.5rem;
+    overflow: auto;
+    resize: none;/* to remove the bottom right corner lines*/
+    cursor: pointer;
+    
+  }
+  
+  textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+
+ 
+  /* Scrollbar container */
+textarea::-webkit-scrollbar {
+  width: 14px;
+}
+
+/* Track background */
+textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Scrollbar thumb */
+textarea::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #4b6cb7, #182848);
+  border-radius: 10px;
+}
+
+/* Hover effect */
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+  
+
+  
+  button {
+    background-color:var(--primary-color);
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: var(--transition-all);
+    display: block; 
+    margin: 0 auto 1.5rem;
+  }
+  
+  button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  button:active {
+    transform: translateY(0);
+  }
+  
+  /* Results container */
+  .results {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .panel {
+    background-color: purple;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--neutral-200);
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem;
+  }
+  
+  .summary {
+    background-color:purple      /* var(--primary-light);*/
+  }
+  
+  #summaryContent {
+    line-height: 1.7;
+    color: white;
+  }
+  
+  /* Mind map container */
+  .mind-map-container {
+    position: relative;
+    border: 1px solid var(--neutral-200);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color:rgb(228, 46, 228);
+  }
+  
+  .mind-map {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    transform-origin: center center;
+  }
+
+
+  .zoom-controls {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 100;
+    border-radius: 0.5rem;
+  }
+  
+  .zoom-btn {
+    min-width: 4rem; /* Wider base size */
+    max-width: 6rem; /* Optional: limit to keep things neat */
+    height: auto;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+    /* background-color: #007bff;
+    border: 1px solid #007bff; */
+    background-color: purple;
+    border: 1px solid  purple;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    line-height: 1.2;
+  
+    white-space: normal;
+    word-break: break-word;
+    transition: var(--transition-all);
+  }
+  
+  .zoom-btn:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  
+  
+  /* Mind map nodes and connections */
+  .node {
+    position: absolute;
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    cursor: default;
+    transform: translate(-50%, -50%);
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: var(--transition-all);
+    user-select: none;
+  }
+  
+  .node:hover {
+    z-index: 100;
+    box-shadow: var(--shadow-md);
+    white-space: normal; /* Expand on hover */
+    max-width: 200px;
+  }
+  
+  .node-main {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    padding: 10px 20px;
+    font-size: 1.125rem;
+    z-index: 30;
+    box-shadow: var(--shadow-md);
+  }
+  
+  .node-sub {
+    background-color: var(--primary-light);
+    border: 2px solid var(--primary-color);
+    color: var(--primary-dark);
+    font-weight: 500;
+    z-index: 20;
+  }
+  
+  .node-leaf {
+    background-color: white;
+    border: 1px solid var(--primary-color);
+    color: var(--neutral-700);
+    z-index: 10;
+  }
+  
+  .connection {
+    position: absolute;
+    height: 2px;
+    background-color: var(--neutral-300);
+    transform-origin: 0 0;
+    z-index: 1;
+    opacity: 0.8;
+  }
+  
+  .loading {
+    display: none;
+    text-align: center;
+    margin: 1.5rem 0;
+    color: var(--neutral-600);
+    font-style: italic;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Helper class for debugging */
+  .debug {
+    border: 1px dashed red;
+  }
+  
+  /* Responsive styles */
+  @media (min-width: 768px) {
+    .results {
+      flex-direction: row;
+    }
+    
+    .panel {
+      flex: 1;
+    }
+    
+    .node-main {
+      font-size: 1.25rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+    
+    h1 {
+      font-size: 1.5rem;
+    }
+    
+    .mind-map {
+      height: 500px;
+    }
+    
+    .node {
+      padding: 6px 12px;
+      font-size: 0.875rem;
+      max-width: 150px;
+    }
+    
+    .node-main {
+      padding: 8px 16px;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      padding: 0.75rem;
+    }
+    
+    h1 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    
+    textarea {
+      height: 10rem;
+    }
+    
+    .mind-map {
+      height: 450px;
+    }
+    
+    .node {
+      padding: 5px 10px;
+      font-size: 0.75rem;
+      max-width: 120px;
+    }
+    
+    .node-main {
+      padding: 7px 14px;
+      font-size: 0.875rem;
+    }
+    
+    button {
+      font-size: 0.875rem;
+      padding: 0.625rem 1.25rem;
+    }
+  }
+
+
+  

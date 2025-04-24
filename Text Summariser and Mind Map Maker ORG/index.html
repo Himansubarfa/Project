@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Summarizer with Mind Map</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Content Summarizer with Mind Map</h1>
+        
+        <textarea id="userContent" placeholder="Paste your content here to generate a summary and mind map..."></textarea>
+        
+        <button id="generateBtn">Generate Summary & Mind Map</button>
+        
+        <div id="loading" class="loading">Analyzing content and generating results...</div>
+        
+        <div id="resultsContainer" class="hidden">
+            <div class="results">
+                <div class="panel summary">
+                    <h2>Summary</h2>
+                    <div id="summaryContent"></div>
+                </div>
+                
+                <div class="panel">
+                    <h2>Mind Map</h2>
+                    <div id="mindMapContainer" class="mind-map-container">
+                        <div id="mindMap" class="mind-map"></div>
+                        <div class="zoom-controls">
+                            <button id="zoomOut" class="zoom-btn" title="Zoom Out">−</button>
+                            <button id="zoomReset" class="zoom-btn" title="Reset Zoom">↺</button>
+                            <button id="zoomIn" class="zoom-btn" title="Zoom In">+</button>
+                            <button id="layoutToggle" class="zoom-btn" title="Toggle Layout">Grid Layout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
